@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Llamativo</title>
+    <link rel="stylesheet" href="reporte.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <aside id="sidebar" class="sidebar">
+            <div class="logo">
+                <h2>Mi Dashboard</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/dashboard.html" class="active">Inicio</a></li>
+                    <li><a href="/productos.html">Productos</a></li>
+                    <li><a href="/venta.html">Ventas</a></li>
+                    <li><a href="/reportes.html">Reportes</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header>
+                <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <h1>Panel de Control</h1>
+                <div class="user-info">
+                    <span>Bienvenido, Usuario</span>
+                    <div class="avatar-dropdown">
+                        <button class="avatar" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Menú de usuario</span>
+                        </button>
+                        <div class="dropdown-menu" aria-label="Menú de usuario">
+                            <button class="dropdown-item">Cerrar sesión</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+           
+            <section id="reports" class="reports-section">
+                <h2>Reportes de Ventas</h2>
+                <div class="reports-container">
+                    <div class="report-filters">
+                        <h3>Filtros</h3>
+                        <form id="reportFiltersForm">
+                            <div class="form-group">
+                                <label for="startDate">Fecha de inicio:</label>
+                                <input type="date" id="startDate" name="startDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="endDate">Fecha de fin:</label>
+                                <input type="date" id="endDate" name="endDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="productCategory">Categoría de producto:</label>
+                                <select id="productCategory" name="productCategory">
+                                    <option value="">Todas las categorías</option>
+                                    <option value="electronica">Electrónica</option>
+                                    <option value="ropa">Ropa</option>
+                                    <option value="hogar">Hogar</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Aplicar Filtros</button>
+                        </form>
+                    </div>
+                    <div class="report-summary">
+                        <h3>Resumen de Ventas</h3>
+                        <div class="table-container">
+                            <table class="report-table" id="salesSummaryTable">
+                                <thead>
+                                    <tr>
+                                        <th>Métrica</th>
+                                        <th>Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Total de Ventas</td>
+                                        <td id="totalSales">$0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Número de Transacciones</td>
+                                        <td id="totalTransactions">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Promedio por Venta</td>
+                                        <td id="averageSale">$0.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="report-details">
+                        <h3>Detalles de Ventas</h3>
+                        <div class="table-container">
+                            <table class="report-table" id="salesDetailsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Fecha</th>
+                                        <th>Cliente</th>
+                                        <th>Productos</th>
+                                        <th>Total</th>
+                                        <th>Método de Pago</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Los detalles de ventas se cargarán dinámicamente aquí -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

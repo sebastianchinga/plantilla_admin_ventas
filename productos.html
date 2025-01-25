@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Llamativo</title>
+    <link rel="stylesheet" href="producto.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <aside id="sidebar" class="sidebar">
+            <div class="logo">
+                <h2>Mi Dashboard</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/dashboard.html" class="active">Inicio</a></li>
+                    <li><a href="/productos.html">Productos</a></li>
+                    <li><a href="/venta.html">Ventas</a></li>
+                    <li><a href="/reportes.html">Reportes</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header>
+                <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <h1>Panel de Control</h1>
+                <div class="user-info">
+                    <span>Bienvenido, Usuario</span>
+                    <div class="avatar-dropdown">
+                        <button class="avatar" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Menú de usuario</span>
+                        </button>
+                        <div class="dropdown-menu" aria-label="Menú de usuario">
+                            <button class="dropdown-item">Cerrar sesión</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section id="products" class="products-section">
+                <h2>Productos</h2>
+                <button id="addProductBtn" class="btn btn-primary">Agregar Nuevo Producto</button>
+                <div class="table-container">
+                    <table class="products-table">
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Categoría</th>
+                                <th>Stock</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Los productos se cargarán dinámicamente aquí -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

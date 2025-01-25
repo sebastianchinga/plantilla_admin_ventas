@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Llamativo</title>
+    <link rel="stylesheet" href="venta.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <aside id="sidebar" class="sidebar">
+            <div class="logo">
+                <h2>Mi Dashboard</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/dashboard.html" class="active">Inicio</a></li>
+                    <li><a href="/productos.html">Productos</a></li>
+                    <li><a href="/venta.html">Ventas</a></li>
+                    <li><a href="/reportes.html">Reportes</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header>
+                <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <h1>Panel de Control</h1>
+                <div class="user-info">
+                    <span>Bienvenido, Usuario</span>
+                    <div class="avatar-dropdown">
+                        <button class="avatar" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Menú de usuario</span>
+                        </button>
+                        <div class="dropdown-menu" aria-label="Menú de usuario">
+                            <button class="dropdown-item">Cerrar sesión</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+
+
+            <section id="sales" class="sales-section">
+                <h2>Crear Venta</h2>
+                <div class="sales-container">
+                    <div class="sales-form">
+                        <h3>Detalles de la Venta</h3>
+                        <form id="salesForm">
+                            <div class="form-group">
+                                <label for="customerName">Nombre del Cliente:</label>
+                                <input type="text" id="customerName" name="customerName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="saleDate">Fecha de Venta:</label>
+                                <input type="date" id="saleDate" name="saleDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="paymentMethod">Método de Pago:</label>
+                                <select id="paymentMethod" name="paymentMethod" required>
+                                    <option value="">Seleccionar método de pago</option>
+                                    <option value="efectivo">Efectivo</option>
+                                    <option value="tarjeta">Tarjeta de Crédito</option>
+                                    <option value="transferencia">Transferencia Bancaria</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="sales-products">
+                        <h3>Agregar Productos</h3>
+                        <div class="search-container">
+                            <input type="text" id="productSearch" placeholder="Buscar productos...">
+                        </div>
+                        <ul id="productList" class="product-list">
+                            <li>
+                                <div class="product-info">
+                                    <img src="https://via.placeholder.com/50" class="product-image" alt="producto">
+                                    <div class="product-details">
+                                        <span class="product-name">Producto 1</span>
+                                        <span class="product-price">$115.00</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-sale" data-id="1">Agregar</button>
+                            </li>
+                            <!-- Los productos se cargarán dinámicamente aquí -->
+                        </ul>
+                    </div>
+                    <div class="sales-summary">
+                        <h3>Resumen de la Venta</h3>
+                        <ul id="selectedProducts" class="selected-products">
+                            <!-- Los productos seleccionados se mostrarán aquí -->
+                        </ul>
+                        <div class="total">
+                            <strong>Total:</strong> <span id="saleTotal">$0.00</span>
+                        </div>
+                        <button id="completeSale" class="btn btn-primary">Completar Venta</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script src="busqueda.js"></script>
+</body>
+
+</html>
