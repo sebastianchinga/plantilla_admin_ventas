@@ -172,14 +172,6 @@ header h1 {
     background-color: #f0f0f0;
 }
 
-.change.positive {
-    color: #4caf50;
-}
-
-.change.negative {
-    color: #f44336;
-}
-
 .sr-only {
     position: absolute;
     width: 1px;
@@ -192,8 +184,6 @@ header h1 {
     border-width: 0;
 }
 
-.products-section,
-.sales-section,
 .reports-section {
     background-color: var(--card-background);
     border-radius: 10px;
@@ -202,8 +192,6 @@ header h1 {
     margin-bottom: 2rem;
 }
 
-.products-section h2,
-.sales-section h2,
 .reports-section h2 {
     margin-bottom: 1rem;
     color: var(--primary-color);
@@ -231,20 +219,19 @@ header h1 {
     background-color: #3a7bc8;
 }
 
+/* Contenedor de la tabla */
 .table-container {
     overflow-x: auto;
     margin-top: 1rem;
 }
 
-.products-table,
+/* Tabla de reporte */
 .report-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
 }
 
-.products-table th,
-.products-table td,
 .report-table th,
 .report-table td {
     padding: 0.75rem;
@@ -252,30 +239,18 @@ header h1 {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.products-table th,
 .report-table th {
     background-color: #f5f5f5;
     font-weight: bold;
     color: var(--primary-color);
 }
 
-.products-table td img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.sales-container,
 .reports-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
 }
 
-.sales-form,
-.sales-products,
-.sales-summary,
 .report-filters,
 .report-summary,
 .report-details {
@@ -284,6 +259,7 @@ header h1 {
     padding: 1rem;
 }
 
+/* Filtros */
 .form-group {
     margin-bottom: 1rem;
 }
@@ -301,7 +277,6 @@ header h1 {
     border-radius: 4px;
 }
 
-.product-list,
 .selected-products {
     list-style-type: none;
     padding: 0;
@@ -311,7 +286,6 @@ header h1 {
     border-radius: 4px;
 }
 
-.product-list li,
 .selected-products li {
     background-color: white;
     border-bottom: 1px solid #ddd;
@@ -322,7 +296,6 @@ header h1 {
     transition: background-color 0.3s ease;
 }
 
-.product-list li .add-to-sale,
 .selected-products li .remove-from-sale {
     background-color: var(--primary-color);
     color: white;
@@ -333,7 +306,6 @@ header h1 {
     transition: background-color 0.3s ease;
 }
 
-.product-list li .add-to-sale:hover,
 .selected-products li .remove-from-sale:hover {
     background-color: #3a7bc8;
 }
@@ -382,14 +354,11 @@ header h1 {
         margin-top: 50px;
     }
 
-    .products-table th,
-    .products-table td,
     .report-table th,
     .report-table td {
         padding: 0.5rem;
     }
 
-    .sales-container,
     .reports-container {
         grid-template-columns: 1fr;
     }
