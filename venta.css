@@ -251,97 +251,23 @@ header h1 {
 }
 
 .search-container {
-    display: flex;
     margin-bottom: 1rem;
 }
 
 .search-container input {
-    flex-grow: 1;
+    width: 100%;
     padding: 0.5rem;
     border: 1px solid #ddd;
-    border-radius: 4px 0 0 4px;
-    font-size: 1rem;
-}
-
-.search-container button {
-    border-radius: 0 4px 4px 0;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-}
-
-.product-list {
-    list-style-type: none;
-    padding: 0;
-    max-height: 300px;
-    overflow-y: auto;
-    border: 1px solid #ddd;
     border-radius: 4px;
 }
 
-.product-list li {
-    background-color: white;
-    border-bottom: 1px solid #ddd;
-    padding: 0.75rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease;
-}
-
-.product-list li:last-child {
-    border-bottom: none;
-}
-
-.product-list li:hover {
-    background-color: #f5f5f5;
-}
-
-.product-list li .product-info {
-    display: flex;
-    align-items: center;
-}
-
-.product-list li .product-image {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-right: 1rem;
-}
-
-.product-list li .product-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.product-list li .product-name {
-    font-weight: bold;
-    margin-bottom: 0.25rem;
-}
-
-.product-list li .product-price {
-    color: var(--primary-color);
-}
-
-.product-list li .add-to-sale {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.product-list li .add-to-sale:hover {
-    background-color: #3a7bc8;
-}
-
+.product-list,
 .selected-products {
     list-style-type: none;
     padding: 0;
 }
 
+.product-list li,
 .selected-products li {
     background-color: white;
     border: 1px solid #ddd;
@@ -353,6 +279,7 @@ header h1 {
     align-items: center;
 }
 
+.product-list li button,
 .selected-products li button {
     background-color: var(--primary-color);
     color: white;
@@ -400,10 +327,6 @@ header h1 {
         background-color: var(--background-color);
         z-index: 999;
         padding: 1rem;
-    }
-
-    .action-buttons {
-        flex-direction: column;
     }
 
     .sales-container {
